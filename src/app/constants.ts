@@ -1,3 +1,1 @@
-export const constants = {
-    PROFILE_PICTURE: '#'
-}
+export const constants = { PROFILE_PICTURE: "gs://fal-con.appspot.com/app/profiles/avatar/default/placeholder_picture.png" };
