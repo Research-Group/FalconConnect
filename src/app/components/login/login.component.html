@@ -1,7 +1,7 @@
 <div class="login">
     <div class="left-column">
-        <div class="content">
-            <img src="#">
+        <div class="background">
+            <img src="https://firebasestorage.googleapis.com/v0/b/fal-con.appspot.com/o/app%2Futpb.png?alt=media&token=36f39810-49e5-46b2-b639-6b3d20c72eaf" />
         </div>
     </div>
     <div class="right-column">
@@ -13,22 +13,25 @@
                 </mat-card-header>
                 <mat-card-content>
                     <mat-form-field class="input-width">
-                        <input matInput formControlName="emailFormControl"
-                                type="text"
-                                required
-                                placeholder="Email">
+                        <input matInput type="text" required placeholder="Email" [formControl]="emailFormControl" [(ngModel)]="usercreds.email">
+                        <mat-error *ngIf="emailFormControl.hasError('pattern')">
+                            Please enter a valid email address.
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is required.
+                        </mat-error>
                     </mat-form-field> <br>
                     <mat-form-field class="input-width">
-                        <input matInput formControlName="passwordFormControl"
-                                type="text" 
-                                required 
-                                placeholder="Password">
+                        <input matInput type="password" required placeholder="Password" [formControl]="passwordFormControl" [(ngModel)]="usercreds.password">
+                        <mat-error *ngIf="passwordFormControl.hasError('required')">
+                            Password is required.
+                        </mat-error>
                     </mat-form-field>
                 </mat-card-content>
                 <mat-card-actions>
                     <button mat-raised-button (click)="login()">Login</button> 
                 </mat-card-actions>
-                <p>Not a member? Click <a (click)="signup()">here</a> to sign up.</p>
+                <p>Not a member? Click <a (click)="signUp()">here</a> to sign up.</p>
             </mat-card>
         </div>
     </div>

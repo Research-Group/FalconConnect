@@ -9,18 +9,17 @@
 .left-column {
     height: 100vh;
     background-color: #f7f7f7;
-    overflow: hidden;
+    position: relative;
 }
 
 .right-column {
     height: 100vh;
     width: 400px;
     background-color: #333333;
-    overflow: hidden;
     position: relative;
 }
 
-.card-container {
+.card-container, .background {
     width: fit-content;
     height: fit-content;
     position: absolute;
@@ -31,8 +30,14 @@
     margin: auto;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 mat-card {
     border-radius: 5px;
+    height: 350px;
     align-self: center;
     vertical-align: middle;
 }

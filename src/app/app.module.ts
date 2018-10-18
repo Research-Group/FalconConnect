@@ -13,6 +13,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth'
 
 // Firebase Config
 import { environment } from '../environments/environment';
@@ -22,6 +23,10 @@ import { appRoutes } from './routes';
 
 // Angular Material
 import { MaterialModule } from './material';
+
+// Servies
+import { AuthService } from './services/auth.service';
+import { AuthguardService } from './services/authguard.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +43,13 @@ import { MaterialModule } from './material';
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.config),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

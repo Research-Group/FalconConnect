@@ -1,0 +1,48 @@
+.signup {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 400px;
+  overflow: hidden;
+}
+
+.left-column {
+  height: 100vh;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.right-column {
+  height: 100vh;
+  width: 400px;
+  background-color: #333333;
+  position: relative;
+}
+
+.card-container,
+.background {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+mat-card {
+  border-radius: 5px;
+  height: 350px;
+  align-self: center;
+  vertical-align: middle;
+}
+
+.mat-raised-button {
+  padding: 0;
+}
