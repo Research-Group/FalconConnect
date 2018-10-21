@@ -17,34 +17,34 @@ export class AuthService {
     }
 
     authUser(): boolean {
-      return this.authState !== null && this .authState !== undefined ? true : false;
+      return this.authState !== null && this.authState !== undefined ? true : false;
     }
 
     get currentUserId(): string {
       return this.authState !== null ? this.authState.uid : '';
     }
 
-    signUp(usercreds) {
-      return this.afauth.auth.createUserWithEmailAndPassword(usercreds.email,
-        usercreds.password).then((user) => {
+    signUp(username: string, email: string, password: string) {
+      return this.afauth.auth.createUserWithEmailAndPassword(email,
+        password).then((user) => {
           this.authState = user;
           this.afauth.auth.currentUser.updateProfile({
-            displayName: usercreds.displayName,
+            displayName: username,
             photoURL: constants.PROFILE_PICTURE
           }).then(() => {
-            this.setUserData(usercreds.email, usercreds.displayName, user.user.photoURL);
+            this.setUserData(username, email, user.user.photoURL);
           })
         })
     }
 
-    setUserData(email: string, displayName: string, photoURL: string) {
+    setUserData(username: string, email: string, photoURL: string) {
       const path = `users/${this.currentUserId}`;
       const statuspath = `status/${this.currentUserId}`;
       const userdoc = this.afs.doc(path);
       const status = this.afs.doc(statuspath);
       userdoc.set({
         email: email,
-        displayName: displayName,
+        displayName: username,
         photoURL: photoURL
       });
       status.set({
@@ -54,9 +54,9 @@ export class AuthService {
       this.router.navigate(['dashboard']);
     }
 
-    login(usercreds) {
-      return this.afauth.auth.signInWithEmailAndPassword(usercreds.email,
-        usercreds.password).then((user) => {
+    login(email, password) {
+      return this.afauth.auth.signInWithEmailAndPassword(email,
+        password).then((user) => {
           this.authState = user;
           const status = 'online';
           this.setUserStatus(status);

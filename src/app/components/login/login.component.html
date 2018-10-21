@@ -11,19 +11,19 @@
                     <mat-card-title>Login</mat-card-title>
                     <mat-card-subtitle>Login to Falcon Connect</mat-card-subtitle>
                 </mat-card-header>
-                <mat-card-content>
+                <mat-card-content [formGroup]="heroForm">
                     <mat-form-field class="input-width">
-                        <input matInput type="text" required placeholder="Email" [formControl]="emailFormControl" [(ngModel)]="usercreds.email">
-                        <mat-error *ngIf="emailFormControl.hasError('pattern')">
+                        <input matInput type="text" required placeholder="Email" formControlName="email">
+                        <mat-error *ngIf="heroForm.get('email').hasError('pattern')">
                             Please enter a valid email address.
                         </mat-error>
-                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                        <mat-error *ngIf="heroForm.get('email').hasError('required')">
                             Email is required.
                         </mat-error>
                     </mat-form-field> <br>
                     <mat-form-field class="input-width">
-                        <input matInput type="password" required placeholder="Password" [formControl]="passwordFormControl" [(ngModel)]="usercreds.password">
-                        <mat-error *ngIf="passwordFormControl.hasError('required')">
+                        <input matInput type="password" required placeholder="Password" formControlName="password">
+                        <mat-error *ngIf="heroForm.get('password').hasError('required')">
                             Password is required.
                         </mat-error>
                     </mat-form-field>

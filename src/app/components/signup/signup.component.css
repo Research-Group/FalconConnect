@@ -39,6 +39,7 @@ img {
 mat-card {
   border-radius: 5px;
   height: 350px;
+  width: 250px;
   align-self: center;
   vertical-align: middle;
 }
