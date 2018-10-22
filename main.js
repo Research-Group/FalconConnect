@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const url = require('url')
 
@@ -7,8 +7,8 @@ let win
 function createWindow() {
     // Create browser window
     win = new BrowserWindow({
-        width: 1200,
-        height: 800
+        width: 500,
+        height: 650
     })
 
     win.loadURL(url.format({
@@ -18,7 +18,12 @@ function createWindow() {
     }))
 
     win.on('closed', () => {
-        win = null
+      win = null
+    })
+
+    ipcMain.on('entry-accepted', () => {
+        win.setSize(1200, 800)
+        win.center()
     })
 }
 

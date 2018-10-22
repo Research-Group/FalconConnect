@@ -60,7 +60,9 @@ export class AuthService {
           this.authState = user;
           const status = 'online';
           this.setUserStatus(status);
-          this.router.navigate(['dashboard']);
+          const { ipcRenderer } = require('electron');
+          ipcRenderer.send('entry-accepted');
+          this.router.navigate(["dashboard"]);
         }).catch((error) => {
           console.log(error);
         })
