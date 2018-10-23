@@ -12,7 +12,8 @@ import {
     MatDialogModule,
     MatTooltipModule,
     MatTabsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSidenavModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
 
@@ -31,7 +32,8 @@ import { NgModule } from '@angular/core';
         MatDialogModule,
         MatTooltipModule,
         MatTabsModule,
-        MatSnackBarModule
+        MatSnackBarModule,
+        MatSidenavModule
     ],
     exports: [
         MatButtonModule,
@@ -47,7 +49,8 @@ import { NgModule } from '@angular/core';
         MatDialogModule,
         MatTooltipModule,
         MatTabsModule,
-        MatSnackBarModule
+        MatSnackBarModule,
+        MatSidenavModule
     ]
 })
 export class MaterialModule { }
