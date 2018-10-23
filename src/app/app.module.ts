@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavComponent } from "./components/nav/nav.component";
 
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
@@ -27,7 +28,6 @@ import { MaterialModule } from './material';
 // Servies
 import { AuthService } from './services/auth.service';
 import { AuthguardService } from './services/authguard.service';
-import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
