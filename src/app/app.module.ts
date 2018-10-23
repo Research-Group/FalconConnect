@@ -37,12 +37,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     LoginComponent,
     SignupComponent,
     DashboardComponent,
-<<<<<<< HEAD
     LeftSideBarComponent,
-    ProfileComponent
-=======
+    ProfileComponent,
     NavComponent
->>>>>>> 7277dc3368211f111a376c0e536213037436c0ca
   ],
   imports: [
     BrowserModule,
