@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 
@@ -7,6 +8,9 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+
+  events = [];
+  opened = [];
 
   constructor(private auth: AuthService) { }
 
@@ -18,3 +22,4 @@ export class NavComponent implements OnInit {
   }
 
 }
+
