@@ -15,7 +15,7 @@
           <mat-form-field class="input-width">
             <input matInput type="text" required placeholder="Username" formControlName="username">
             <mat-error *ngIf="heroForm.get('username').hasError('required')">
-              Email is required.
+              Username is required.
             </mat-error>
           </mat-form-field> <br>
           <mat-form-field class="input-width">
@@ -24,13 +24,13 @@
               Please enter a vailid email address.
             </mat-error>
             <mat-error *ngIf="heroForm.get('email').hasError('required')">
-              Password is required.
+              Email is required.
             </mat-error>
           </mat-form-field>
           <mat-form-field class="input-width">
             <input matInput type="password" required placeholder="Password" formControlName="password">
             <mat-error *ngIf="heroForm.get('password').hasError('required')">
-              Username is required.
+              Password is required.
             </mat-error>
           </mat-form-field>
         </mat-card-content>

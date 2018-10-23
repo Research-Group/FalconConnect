@@ -27,13 +27,15 @@ import { MaterialModule } from './material';
 // Servies
 import { AuthService } from './services/auth.service';
 import { AuthguardService } from './services/authguard.service';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

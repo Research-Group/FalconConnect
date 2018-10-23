@@ -75,4 +75,12 @@ export class AuthService {
         console.log(error);
       })
     }
+
+    logout() {
+      this.afauth.auth.signOut().then(() => {
+        this.router.navigate(['login']);
+      }).catch((err) => {
+        console.log(err);
+      })
+    }
 }
