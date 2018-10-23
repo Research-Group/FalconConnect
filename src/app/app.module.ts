@@ -28,6 +28,8 @@ import { MaterialModule } from './material';
 // Servies
 import { AuthService } from './services/auth.service';
 import { AuthguardService } from './services/authguard.service';
+import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { AuthguardService } from './services/authguard.service';
     LoginComponent,
     SignupComponent,
     DashboardComponent,
+    LeftSideBarComponent,
+    ProfileComponent,
     NavComponent
   ],
   imports: [
