@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavComponent } from "./components/nav/nav.component";
 
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
@@ -36,8 +37,12 @@ import { ProfileComponent } from './components/profile/profile.component';
     LoginComponent,
     SignupComponent,
     DashboardComponent,
+<<<<<<< HEAD
     LeftSideBarComponent,
     ProfileComponent
+=======
+    NavComponent
+>>>>>>> 7277dc3368211f111a376c0e536213037436c0ca
   ],
   imports: [
     BrowserModule,
