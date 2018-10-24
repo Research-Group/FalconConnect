@@ -1,11 +1,7 @@
-<mat-sidenav-container class="container">
-
-  <mat-sidenav class="sidenav"  #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')">
-    <mat-sidenav-content>
-      Profile 1
-    </mat-sidenav-content>
-  </mat-sidenav>
-    <mat-sidenav-content>
-      <p></p>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+<div class ="nav">
+    <mat-toolbar>
+      <span>Falcon Connect</span>
+      <span class="fill"></span>
+        <span><button mat-button (click)="logout()">Logout</button></span>
+    </mat-toolbar>
+  </div>

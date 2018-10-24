@@ -1,32 +1,13 @@
-body {
-  font-family: "Lato", sans-serif;
+.toolbar-filler {
+  flex: 1 1 auto
 }
-
-.sidenav {
-  background-color:transparent;
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(189, 69, 0);
-  overflow-x: hidden;
-  padding-top: 20px;
+.sidenav{
+  flex: 1 1 auto;
+  background-color:rgba(230, 123, 2, 0.897);
 }
-
-.sidenav a {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
+.container{
+  height:100vh;
 }
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
+.class{
+  text-align:left;
 }

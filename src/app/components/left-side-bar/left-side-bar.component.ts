@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-side-bar.component.css']
 })
 export class LeftSideBarComponent implements OnInit {
-
+  events = [];
+  opened = [];
   constructor() { }
 
   ngOnInit() {

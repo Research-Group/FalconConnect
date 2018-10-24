@@ -13,11 +13,8 @@ import {
     MatTooltipModule,
     MatTabsModule,
     MatSnackBarModule,
-<<<<<<< HEAD
     MatMenuModule,
     MatSidenav,
-=======
->>>>>>> bc31eaed7232d35024a785885c3c9da6a99426d0
     MatSidenavModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
@@ -38,10 +35,7 @@ import { NgModule } from '@angular/core';
         MatTooltipModule,
         MatTabsModule,
         MatSnackBarModule,
-<<<<<<< HEAD
         MatMenuModule,
-=======
->>>>>>> bc31eaed7232d35024a785885c3c9da6a99426d0
         MatSidenavModule
     ],
     exports: [
@@ -59,10 +53,7 @@ import { NgModule } from '@angular/core';
         MatTooltipModule,
         MatTabsModule,
         MatSnackBarModule,
-<<<<<<< HEAD
         MatMenuModule,
-=======
->>>>>>> bc31eaed7232d35024a785885c3c9da6a99426d0
         MatSidenavModule
     ]
 })
