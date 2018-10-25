@@ -1,13 +1,33 @@
-.toolbar-filler {
-  flex: 1 1 auto
+
+.sidenav2{
+  background-color:#323232;
+  width: 325px;
+  position: absolute;
+  left:90px;
 }
 .sidenav{
-  flex: 1 1 auto;
-  background-color:rgba(230, 123, 2, 0.897);
+  width:100%;
+  background-color:#3e3e3e;
+  width: 90px;
 }
 .container{
   height:100vh;
 }
-.class{
-  text-align:left;
+.color{
+ background-color:black;
+ width:100%;
 }
+.contain{
+  height:50px;
+  width:50px;
+}
+img{
+  height:100%;
+  max-width:auto;
+
+}
+.right{
+ height:50px;
+ width:50px;
+ }
+

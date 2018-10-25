@@ -37,6 +37,7 @@ import { NgModule } from '@angular/core';
         MatSnackBarModule,
         MatMenuModule,
         MatSidenavModule
+
     ],
     exports: [
         MatButtonModule,
