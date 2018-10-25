@@ -1,0 +1,33 @@
+
+.sidenav2{
+  background-color:#323232;
+  width: 325px;
+  position: absolute;
+  left:90px;
+}
+.sidenav{
+  width:100%;
+  background-color:#3e3e3e;
+  width: 90px;
+}
+.container{
+  height:100vh;
+}
+.color{
+ background-color:black;
+ width:100%;
+}
+.contain{
+  height:50px;
+  width:50px;
+}
+img{
+  height:100%;
+  max-width:auto;
+
+}
+.right{
+ height:50px;
+ width:50px;
+ }
+

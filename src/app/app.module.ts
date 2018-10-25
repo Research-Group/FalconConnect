@@ -10,11 +10,13 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from "./components/nav/nav.component";
+import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth'
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 // Firebase Config
 import { environment } from '../environments/environment';
@@ -28,8 +30,7 @@ import { MaterialModule } from './material';
 // Servies
 import { AuthService } from './services/auth.service';
 import { AuthguardService } from './services/authguard.service';
-import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.component';
-import { ProfileComponent } from './components/profile/profile.component';
+import { ClassesComponent } from './components/classes/classes.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     DashboardComponent,
     LeftSideBarComponent,
     ProfileComponent,
-    NavComponent
+    NavComponent,
+    ClassesComponent
   ],
   imports: [
     BrowserModule,
