@@ -24,15 +24,15 @@ export class AuthService {
       return this.authState !== null ? this.authState.uid : '';
     }
 
-    signUp(username: string, email: string, password: string) {
-      return this.afauth.auth.createUserWithEmailAndPassword(email,
-        password).then((user) => {
+    signUp(creds) {
+      return this.afauth.auth.createUserWithEmailAndPassword(creds.email,
+        creds.password).then((user) => {
           this.authState = user;
           this.afauth.auth.currentUser.updateProfile({
-            displayName: username,
+            displayName: creds.username,
             photoURL: constants.PROFILE_PICTURE
           }).then(() => {
-            this.setUserData(username, email, user.user.photoURL);
+            this.setUserData(creds.username, creds.email, user.user.photoURL);
           })
         })
     }
@@ -54,9 +54,10 @@ export class AuthService {
       this.router.navigate(['dashboard']);
     }
 
-    login(email, password) {
-      return this.afauth.auth.signInWithEmailAndPassword(email,
-        password).then((user) => {
+    login(creds) {
+      return this.afauth.auth.signInWithEmailAndPassword(creds.email,
+        creds.password).then((user) => {
+          console.log(email);
           this.authState = user;
           const status = 'online';
           this.setUserStatus(status);

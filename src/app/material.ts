@@ -14,7 +14,6 @@ import {
     MatTabsModule,
     MatSnackBarModule,
     MatMenuModule,
-    MatSidenav,
     MatSidenavModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
