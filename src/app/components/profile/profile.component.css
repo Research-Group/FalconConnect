@@ -1,0 +1,9 @@
+.contain{
+  height:50px;
+  width:50px;
+}
+img{
+  height:100%;
+  max-width:auto;
+  padding-left:15px;
+}

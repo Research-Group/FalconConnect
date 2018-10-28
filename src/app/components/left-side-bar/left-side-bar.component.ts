@@ -1,4 +1,8 @@
+import { ClassesComponent } from './../classes/classes.component';
 import { Component, OnInit } from '@angular/core';
+import { getLocaleDateFormat } from '@angular/common';
+import { app } from 'firebase';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-left-side-bar',
@@ -12,5 +16,8 @@ export class LeftSideBarComponent implements OnInit {
 
   ngOnInit() {
   }
+open() {
+
+}
 
 }
