@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { LeftSideBarComponent } from '../left-side-bar/left-side-bar.component';
+import { SideBarPanelComponent } from '../side-bar-panel/side-bar-panel.component';
 
 @Component({
   selector: 'app-profile',
@@ -13,7 +15,7 @@ export class ProfileComponent implements OnInit {
     photoURL: ''
   };
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private sideBarPanel: SideBarPanelComponent) {
     this.userService.currentUser.subscribe((user) => {
       this.user = user;
     })
@@ -28,6 +30,10 @@ export class ProfileComponent implements OnInit {
 
   chooseImage() {
 
+  }
+
+  toggle() {
+    this.sideBarPanel.toggle('profile');
   }
 
 }
