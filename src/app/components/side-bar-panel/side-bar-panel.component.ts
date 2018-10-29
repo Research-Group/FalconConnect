@@ -7,16 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarPanelComponent implements OnInit {
 
-  private panel;
+  public profile: boolean;
+  public classes: boolean;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
   }
 
-  toggle(name) {
+  toggle(panel: string) {
+    if (panel == 'profile')
+      this.profile = true;
 
-    console.log(this.panel.name);
-    this.panel.name = name;
+    if (panel == 'classes')
+      this.classes = true;
   }
 }

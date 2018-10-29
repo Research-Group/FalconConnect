@@ -27,7 +27,7 @@ export class LeftSideBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggle(panel) {
+  toggle(panel: string) {
     this.sideBarPanel.toggle(panel);
   }
 

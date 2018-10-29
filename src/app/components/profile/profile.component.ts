@@ -15,10 +15,8 @@ export class ProfileComponent implements OnInit {
     photoURL: ''
   };
 
-  constructor(private userService: UserService, private sideBarPanel: SideBarPanelComponent) {
-    this.userService.currentUser.subscribe((user) => {
-      this.user = user;
-    })
+  constructor() {
+
    }
 
   ngOnInit() {
@@ -32,8 +30,5 @@ export class ProfileComponent implements OnInit {
 
   }
 
-  toggle() {
-    this.sideBarPanel.toggle('profile');
-  }
 
 }

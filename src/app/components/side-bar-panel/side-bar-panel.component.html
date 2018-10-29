@@ -1,6 +1,10 @@
 <div class="container">
   <div class="side-bar-panel">
-    <app-classes *ngIf="panel.name == 'classes'"></app-classes>
-    <app-settings *ngIf="panel.name == 'profile'"></app-settings>
+    <div *ngIf="classes">
+      <app-classes></app-classes>
+    </div>
+    <div *ngIf="profile">
+      <app-settings></app-settings>
+    </div>
   </div>
 </div>
