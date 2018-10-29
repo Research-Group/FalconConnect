@@ -1,31 +1,58 @@
 
+.container {
+  background-color: #3e3e3e;
+  height: 100vh;
+  width: 90px;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 90px 90px;
+}
+
 .left-side-bar {
   background-color: #3e3e3e;
-  width: 90px;
-  height: 100vh;
-}
-
-.container {
-  height: 100vh;
-}
-
-.color {
- background-color: black;
- width: 100%;
+  width: 50px;
+  margin: 0 auto;
 }
 
 .contain {
-  height:50px;
+  height: 50px;
   width: 50px;
+  position: relative;
+  align-content: center;
+}
+
+.profile-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50em;
+  box-shadow: none;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  align-content: center;
+  overflow: hidden;
 }
 
 img {
-  height: 100%;
-  max-width: auto;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .right {
   height: 50px;
   width: 50px;
+ }
+
+ ::ng-deep .mat-button {
+   min-width: 50px !important;
+   padding: 0;
+   margin: 0;
  }
 

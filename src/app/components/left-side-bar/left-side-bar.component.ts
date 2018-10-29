@@ -4,6 +4,7 @@ import { getLocaleDateFormat } from '@angular/common';
 import { app } from 'firebase';
 import {ActivatedRoute, Router} from '@angular/router';
 import { SideBarPanelComponent } from '../side-bar-panel/side-bar-panel.component';
+import { UserService } from '../../services/user.service'
 
 @Component({
   selector: 'app-left-side-bar',
@@ -11,18 +12,23 @@ import { SideBarPanelComponent } from '../side-bar-panel/side-bar-panel.componen
   styleUrls: ['./left-side-bar.component.css']
 })
 export class LeftSideBarComponent implements OnInit {
-  events = [];
-  opened = [];
-  constructor(private sideBarPanel: SideBarPanelComponent) { }
+
+  user = {
+    displayName: '',
+    photoURL: ''
+  };
+ 
+  constructor(private sideBarPanel: SideBarPanelComponent, private userService: UserService) { 
+    this.userService.currentUser.subscribe((user) => {
+      this.user = user;
+    })
+  }
 
   ngOnInit() {
   }
-open() {
 
-}
-
-toggle() {
-  this.sideBarPanel.toggle('classes');
-}
+  toggle(panel) {
+    this.sideBarPanel.toggle(panel);
+  }
 
 }
