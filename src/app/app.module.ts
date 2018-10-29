@@ -12,6 +12,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from "./components/nav/nav.component";
 import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ClassesComponent } from "./components/classes/classes.component";
 
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
@@ -30,7 +31,7 @@ import { MaterialModule } from './material';
 // Servies
 import { AuthService } from './services/auth.service';
 import { AuthguardService } from './services/authguard.service';
-import { ClassesComponent } from './components/classes/classes.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ClassesComponent } from './components/classes/classes.component';
   ],
   providers: [
     AuthService,
-    AuthguardService
+    AuthguardService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

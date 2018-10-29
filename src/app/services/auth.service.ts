@@ -57,7 +57,6 @@ export class AuthService {
     login(creds) {
       return this.afauth.auth.signInWithEmailAndPassword(creds.email,
         creds.password).then((user) => {
-          console.log(email);
           this.authState = user;
           const status = 'online';
           this.setUserStatus(status);
