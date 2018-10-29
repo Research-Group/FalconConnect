@@ -12,12 +12,19 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class LeftSideBarComponent implements OnInit {
   events = [];
   opened = [];
-  constructor() { }
+  say = 'hello';
+  public loadComponent = false;
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 open() {
 
+
+}
+
+loadMyChildComponent() {
+   this.loadComponent = true;
 }
 
 }
