@@ -23,7 +23,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 
 // Routes
-import { appRoutes } from './routes';
+import { AppRoutingModule } from './app-routing.module';
 
 // Angular Material
 import { MaterialModule } from './material';
@@ -50,7 +50,7 @@ import { UserService } from './services/user.service';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.config),
     AngularFirestoreModule,
     AngularFireAuthModule
