@@ -13,6 +13,7 @@ import { NavComponent } from "./components/nav/nav.component";
 import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ClassesComponent } from "./components/classes/classes.component";
+import { SideBarPanelComponent } from './components/side-bar-panel/side-bar-panel.component';
 
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
@@ -42,7 +43,8 @@ import { UserService } from './services/user.service';
     LeftSideBarComponent,
     ProfileComponent,
     NavComponent,
-    ClassesComponent
+    ClassesComponent,
+    SideBarPanelComponent
   ],
   imports: [
     BrowserModule,
