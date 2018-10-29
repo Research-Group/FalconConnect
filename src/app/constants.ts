@@ -1,1 +1,1 @@
-export const constants = { PROFILE_PICTURE: "gs://fal-con.appspot.com/app/profiles/avatar/default/placeholder_picture.png" };
+export const constants = { PROFILE_PICTURE: "https://firebasestorage.googleapis.com/v0/b/fal-con.appspot.com/o/app%2Fprofiles%2Favatar%2Fdefault%2Fplaceholder_picture.png?alt=media&token=1da1250c-8543-4166-bd36-6e1834ffafb7" };

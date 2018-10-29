@@ -1,1 +1,24 @@
+.layout {
+    display: grid;
+    grid-template-columns: 90px 325px auto;
+    height: 100vh;
+}
 
+.left-side-bar {
+    position: relative;
+    width: 90px;
+    height: 100vh;
+}
+
+.side-bar-panel {
+    position: relative;
+    width: 325px;
+    height: 100vh;
+}
+
+.chat-feed {
+    position: relative;
+    width: auto;
+    height: 100vh;
+    background-color: #222222;
+}
