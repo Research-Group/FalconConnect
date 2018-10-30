@@ -1,33 +1,58 @@
 
-.sidenav2{
-  background-color:#323232;
-  width: 325px;
-  position: absolute;
-  left:90px;
-}
-.sidenav{
-  width:100%;
-  background-color:#3e3e3e;
+.container {
+  background-color: #3e3e3e;
+  height: 100vh;
   width: 90px;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 90px 90px;
 }
-.container{
-  height:100vh;
-}
-.color{
- background-color:black;
- width:100%;
-}
-.contain{
-  height:50px;
-  width:50px;
-}
-img{
-  height:100%;
-  max-width:auto;
 
+.left-side-bar {
+  background-color: #3e3e3e;
+  width: 50px;
+  margin: 0 auto;
 }
-.right{
- height:50px;
- width:50px;
+
+.contain {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  align-content: center;
+}
+
+.profile-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50em;
+  box-shadow: none;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  align-content: center;
+  overflow: hidden;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.right {
+  height: 50px;
+  width: 50px;
+ }
+
+ ::ng-deep .mat-button {
+   min-width: 50px !important;
+   padding: 0;
+   margin: 0;
  }
 

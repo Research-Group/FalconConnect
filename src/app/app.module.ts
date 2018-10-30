@@ -12,6 +12,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from "./components/nav/nav.component";
 import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ClassesComponent } from "./components/classes/classes.component";
+import { SideBarPanelComponent } from './components/side-bar-panel/side-bar-panel.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
@@ -22,7 +25,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 
 // Routes
-import { appRoutes } from './routes';
+import { AppRoutingModule } from './app-routing.module';
 
 // Angular Material
 import { MaterialModule } from './material';
@@ -30,7 +33,7 @@ import { MaterialModule } from './material';
 // Servies
 import { AuthService } from './services/auth.service';
 import { AuthguardService } from './services/authguard.service';
-import { ClassesComponent } from './components/classes/classes.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { ClassesComponent } from './components/classes/classes.component';
     LeftSideBarComponent,
     ProfileComponent,
     NavComponent,
-    ClassesComponent
+    ClassesComponent,
+    SideBarPanelComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -49,14 +54,16 @@ import { ClassesComponent } from './components/classes/classes.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.config),
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
   providers: [
     AuthService,
-    AuthguardService
+    AuthguardService,
+    UserService,
+    SideBarPanelComponent
   ],
   bootstrap: [AppComponent]
 })

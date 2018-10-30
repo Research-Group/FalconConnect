@@ -35,7 +35,13 @@ export class SignupComponent implements OnInit {
   get password(): string { return this.heroForm.get('password').value }
 
   createAccount() {
-    this.auth.signUp(this.username, this.email, this.password);
+    const creds = {
+      username: this.username,
+      email: this.email,
+      password: this.password
+    };
+
+    this.auth.signUp(creds);
   }
 
 }

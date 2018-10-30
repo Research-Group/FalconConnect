@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { LeftSideBarComponent } from '../left-side-bar/left-side-bar.component';
+import { SideBarPanelComponent } from '../side-bar-panel/side-bar-panel.component';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  user = {
+    displayName: '',
+    photoURL: ''
+  };
+
+  constructor() {
+
+   }
 
   ngOnInit() {
   }
+
+  updateName() {
+
+  }
+
+  chooseImage() {
+
+  }
+
 
 }
