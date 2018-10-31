@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarPanelComponent implements OnInit {
 
-  public profile: boolean;
-  public classes: boolean;
+  profilePanel: boolean = false;
+  classes: boolean = false;
 
   constructor() {
    }
@@ -17,8 +17,8 @@ export class SideBarPanelComponent implements OnInit {
   }
 
   toggle(panel: string) {
-    if (panel == 'profile')
-      this.profile = true;
+    if (panel == 'profilePanel')
+      this.profilePanel = !this.profilePanel;
 
     if (panel == 'classes')
       this.classes = true;
