@@ -1,9 +1,6 @@
-.contain{
-  height:50px;
-  width:50px;
+p{
+  margin: 0;
+  padding: 0;
 }
-img{
-  height:100%;
-  max-width:auto;
-  padding-left:15px;
-}
+.centered-and-cropped {object-fit: cover}
+

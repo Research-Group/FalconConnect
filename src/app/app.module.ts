@@ -43,8 +43,7 @@ import { UserService } from './services/user.service';
     ProfileComponent,
     NavComponent,
     ClassesComponent,
-    SideBarPanelComponent,
-    SettingsComponent
+    SideBarPanelComponent
   ],
   imports: [
     BrowserModule,

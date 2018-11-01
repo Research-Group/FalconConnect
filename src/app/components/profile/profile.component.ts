@@ -15,8 +15,10 @@ export class ProfileComponent implements OnInit {
     photoURL: ''
   };
 
-  constructor() {
-
+  constructor(private userService: UserService) {
+    this.userService.currentUser.subscribe((user) => {
+      this.user = user; 
+    })
    }
 
   ngOnInit() {

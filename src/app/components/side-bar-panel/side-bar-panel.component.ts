@@ -17,5 +17,6 @@ export class SideBarPanelComponent implements OnInit {
 
     var element = document.getElementById(panel);
     element.classList.toggle("show");
+
   }
 }
