@@ -7,12 +7,6 @@ import { Component, OnInit } from '@angular/core'
 })
 export class SideBarPanelComponent implements OnInit {
 
-<<<<<<< HEAD
-  profilePanel: boolean = false;
-  classes: boolean = false;
-
-=======
->>>>>>> ae798970e8ae37e9d565da9f1aa258fd56f5e8ed
   constructor() {
    }
 
@@ -20,11 +14,6 @@ export class SideBarPanelComponent implements OnInit {
   }
 
   toggle(panel: string) {
-<<<<<<< HEAD
-    if (panel == 'profilePanel')
-      this.profilePanel = !this.profilePanel;
-=======
->>>>>>> ae798970e8ae37e9d565da9f1aa258fd56f5e8ed
 
     var element = document.getElementById(panel);
     element.classList.toggle("show");
