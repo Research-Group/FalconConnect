@@ -12,47 +12,58 @@
 
 .left-side-bar {
   background-color: #3e3e3e;
-  width: 50px;
+  width: 90px;
   margin: 0 auto;
-}
-
-.contain {
-  height: 50px;
-  width: 50px;
-  position: relative;
-  align-content: center;
 }
 
 .profile-btn {
   background-color: transparent;
-  border: 2px solid white;
-  border-radius: 50em;
   box-shadow: none;
-  height: 50px;
-  width: 50px;
+  height: 90px;
+  width: 90px;
   position: relative;
-  align-content: center;
-  overflow: hidden;
+  left: 0;
 }
 
 img {
   height: 50px;
   width: 50px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+}
+
+.centered-and-cropped {
+  height: 50px;
+  width: 50px;
+  border-radius: 50em;
+  object-fit: cover;
 }
 
 .right {
-  height: 50px;
-  width: 50px;
+  height: 90px;
+  width: 90px;
+  box-sizing: border-box !important;
+  border-left-width: 5px;
  }
 
  ::ng-deep .mat-button {
-   min-width: 50px !important;
-   padding: 0;
-   margin: 0;
+    min-width: 90px !important;
+    height: 90px;
+    width: 90px;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    align-self: left;
+    border-radius: 0;
+    box-sizing: border-box !important;
+    border-left-width: 5px !important;
+ }
+
+ ::ng-deep .mat-button:hover {
+    background-color: #666666;
+ }
+
+ ::ng-deep .mat-button:active {
+    border-left: 5px solid #F68F44;
+    box-sizing: border-box !important;
+    padding-left: -5px;
  }
 
