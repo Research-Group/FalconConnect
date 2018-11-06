@@ -14,8 +14,6 @@ import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.c
 import { ProfileComponent } from './components/profile/profile.component';
 import { ClassesComponent } from "./components/classes/classes.component";
 import { SideBarPanelComponent } from './components/side-bar-panel/side-bar-panel.component';
-import { SettingsComponent } from './components/settings/settings.component';
-
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -45,8 +43,7 @@ import { UserService } from './services/user.service';
     ProfileComponent,
     NavComponent,
     ClassesComponent,
-    SideBarPanelComponent,
-    SettingsComponent
+    SideBarPanelComponent
   ],
   imports: [
     BrowserModule,
