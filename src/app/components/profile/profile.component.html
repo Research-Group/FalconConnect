@@ -1,11 +1,14 @@
-<!--Profile picture-->
-<img class="centered-and-cropped" src="{{user.photoURL}}" width="150" height="150" style="border-radius:50%">
-
-<!--Nickname displayed-->
-<h3>Nickname: {{user.displayName}}</h3>
-
-<!--Two buttons. edit nickname and edit photo-->
-<span matTooltip="Change your nickname"><button mat-mini-fab color="primary" (click)="updateName()"><mat-icon>mode_edit</mat-icon>
-<span matTooltip="Change your profile photo"><button mat-mini-fab color="primary" (click)="fileInput.click()"><mat-icon>assignment_ind</mat-icon>
-<input #fileInput type="file" (change)="chooseImage($event)" style="display:none;"/>
+<div class="contain">
+  <div class="profile">
+    <div class="wrap">
+      <img class="centered-and-cropped" src="{{user.photoURL}}">
+      <div class="overlay">
+        <div class="text">CHANGE PICTURE</div>
+      </div>
+    </div>
+    <h3>Nickname: {{user.displayName}}</h3>
+    <span matTooltip="Change your nickname"><button mat-mini-fab color="primary" (click)="updateName()"></button></span>
+    <input #fileInput type="file" (change)="chooseImage($event)" style="display:none;"/>
+  </div>
+</div>
 

@@ -5,11 +5,12 @@
  left:45%;
 position: absolute;
 top:5px;
-height:50px;
-width:50px;
+height:40px;
+width:40px;
 }
 mat-toolbar{
   background-color:#f68f44;
+  height: 50px;
 }
 .contain{
   height:50px;

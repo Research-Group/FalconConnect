@@ -14,10 +14,12 @@ import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.c
 import { ProfileComponent } from './components/profile/profile.component';
 import { ClassesComponent } from "./components/classes/classes.component";
 import { SideBarPanelComponent } from './components/side-bar-panel/side-bar-panel.component';
+
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 // Firebase Config
 import { environment } from '../environments/environment';
@@ -54,7 +56,8 @@ import { UserService } from './services/user.service';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.config),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FontAwesomeModule
   ],
   providers: [
     AuthService,

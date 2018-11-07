@@ -1,10 +1,23 @@
 <div class="container">
   <div class="left-side-bar">
     <div class="contain">
-      <button class="profile-btn" mat-button (click)="toggle('profile')"><img class="centered-and-cropped" src="{{user.photoURL}}"></button>
+      <div class="profile"><img class="centered-and-cropped" src="{{user.photoURL}}"></div>
     </div>
-    <div class="contain">
-      <span><button class="right" mat-button (click)="toggle('classes')"><strong><img src="https://firebasestorage.googleapis.com/v0/b/fal-con.appspot.com/o/app%2Fpc.png?alt=media&token=cf135b50-2430-4362-8b63-890fffe0b48b"></strong></button></span>
+    <div>
+      <button class="right" mat-button (click)="toggle('classes')">
+        <fa-icon class="icons" [icon]="faUsers"></fa-icon> <br>
+        <span class="label">Classes</span>
+      </button>
+    </div>
+    <div>
+      <button class="right" mat-button (click)="toggle('classmates')">
+        <fa-icon class="icons" [icon]="faUser"></fa-icon> <br>
+        <span class="label">Classmates</span>
+      </button>
+    </div>
+    <div></div>
+    <div class="contain settings" (click)="toggle('profile')">
+      <fa-icon class="settings-btn" [icon]="faCog"></fa-icon>
     </div>
   </div>
 </div>

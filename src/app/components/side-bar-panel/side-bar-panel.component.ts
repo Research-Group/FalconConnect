@@ -8,45 +8,26 @@ import { Component, OnInit } from '@angular/core'
 })
 export class SideBarPanelComponent implements OnInit {
 
-
-
+  private element;
 
   constructor() {
    }
 
   ngOnInit() {
+    this.element = document.getElementById("profile");
+    this.element.classList.add("show");
   }
 
   toggle(panel: string) {
-  // toggles everything off then opens by ID, so far you cannot click to close and leave pane empty.
-  var profile = document.getElementById('profile');
-  var classes = document.getElementById('classes');
-  if(profile.classList.toggle("show")==true && classes.classList.toggle("show")==true){
-    profile.classList.toggle("show");
-    classes.classList.toggle("show");
-  }
-  else if (profile.classList.toggle("show")==true){
-  profile.classList.toggle("show");
-  }
-  else if (classes.classList.toggle("show")==true){
-    classes.classList.toggle("show");
-  }
 
-  if (panel == 'profile'){
-  var element = document.getElementById(panel);
-  element.classList.toggle("show");}
+    this.element = document.getElementById(panel);
+    const els = document.getElementsByClassName("hidden");
 
-  else if (panel == 'classes') {
-   // element = document.getElementById('profile');
-   // if(element.classList.toggle("show")==true){
-   //  element.classList.toggle("show");
-   // }
-  element = document.getElementById(panel);
-  element.classList.toggle("show");
-
-
-
-          }
-
+    if (!this.element.classList.contains("show")) {
+      for (var i = 0; i < els.length; i++) {
+        els[i].classList.remove("show");
+      }
+      this.element.classList.add("show");
+    }
   }
 }

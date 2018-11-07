@@ -1,18 +1,18 @@
 .layout {
     display: grid;
-    grid-template-columns: 90px 325px auto;
+    grid-template-columns: 75px 300px auto;
     height: 100vh;
 }
 
 .left-side-bar {
     position: relative;
-    width: 90px;
+    width: 75px;
     height: 100vh;
 }
 
 .side-bar-panel {
     position: relative;
-    width: 325px;
+    width: 300px;
     height: 100vh;
 }
 

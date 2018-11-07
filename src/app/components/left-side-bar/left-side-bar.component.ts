@@ -5,6 +5,7 @@ import { app } from 'firebase';
 import {ActivatedRoute, Router} from '@angular/router';
 import { SideBarPanelComponent } from '../side-bar-panel/side-bar-panel.component';
 import { UserService } from '../../services/user.service'
+import { faUsers, faUser, faCog } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-left-side-bar',
@@ -17,6 +18,10 @@ export class LeftSideBarComponent implements OnInit {
     displayName: '',
     photoURL: ''
   };
+
+  faUsers = faUsers;
+  faUser = faUser;
+  faCog = faCog;
  
   constructor(private sideBarPanel: SideBarPanelComponent, private userService: UserService) { 
     this.userService.currentUser.subscribe((user) => {
