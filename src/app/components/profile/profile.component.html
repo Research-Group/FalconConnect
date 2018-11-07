@@ -1,14 +1,18 @@
 <div class="contain">
   <div class="profile">
     <div class="wrap">
-      <img class="centered-and-cropped" src="{{user.photoURL}}">
-      <div class="overlay">
-        <div class="text">CHANGE PICTURE</div>
-      </div>
+      <img class="centered-and-cropped" src="{{user.photoURL}}" />
+      <div class="overlay"><div class="text">CHANGE PICTURE</div></div>
     </div>
-    <h3>Nickname: {{user.displayName}}</h3>
-    <span matTooltip="Change your nickname"><button mat-mini-fab color="primary" (click)="updateName()"></button></span>
-    <input #fileInput type="file" (change)="chooseImage($event)" style="display:none;"/>
+    <h3>Nickname: {{ user.displayName }}</h3>
+    <span matTooltip="Change your nickname"
+      ><button mat-mini-fab color="primary" (click)="updateName()"></button
+    ></span>
+    <input
+      #fileInput
+      type="file"
+      (change)="chooseImage($event)"
+      style="display:none;"
+    />
   </div>
 </div>
-
