@@ -54,6 +54,15 @@ img {
   border-left-width: 5px;
  }
 
+ .selected {
+   position: absolute;
+   height: 100%;
+   width: 5px;
+   background-color: #F68F44;
+   left: 0px;
+   top: 0;
+ }
+
 .icons {
   font-size: 18px;
   color: #EFEFEF;
@@ -108,13 +117,5 @@ br {
 
  ::ng-deep .mat-button:hover {
     background-color: #666666;
- }
-
- ::ng-deep .mat-button:active::before {
-    content: ' ';
-    width: 5px;
-    border-width: 5px;
-    background-color: #F68F44;
-    position: relative;
  }
 

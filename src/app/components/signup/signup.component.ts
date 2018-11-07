@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service'
+import { AuthService } from '../../services/auth.service';
 import { FormControl, Validators, FormGroup} from '@angular/forms';
 
+// tslint:disable-next-line:max-line-length
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 @Component({
@@ -14,7 +15,7 @@ export class SignupComponent implements OnInit {
   constructor(private auth: AuthService) { }
 
   heroForm: FormGroup;
-  
+
   ngOnInit() {
     this.heroForm = new FormGroup({
       username: new FormControl('', [
@@ -30,9 +31,9 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  get username(): string { return this.heroForm.get('username').value }
-  get email(): string { return this.heroForm.get('email').value }
-  get password(): string { return this.heroForm.get('password').value }
+  get username(): string { return this.heroForm.get('username').value; }
+  get email(): string { return this.heroForm.get('email').value; }
+  get password(): string { return this.heroForm.get('password').value; }
 
   createAccount() {
     const creds = {

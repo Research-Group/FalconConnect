@@ -13,6 +13,6 @@ export class UserService {
   constructor(private afauth: AngularFireAuth) {
     this.afauth.authState.subscribe((user: firebase.User) => {
       this.currentUser.next(user);
-    })
+    });
    }
 }

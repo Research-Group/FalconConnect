@@ -10,10 +10,10 @@ export class AuthService {
   private authState: any;
 
   constructor(private afauth: AngularFireAuth, private afs: AngularFirestore,
-    private router: Router) { 
+    private router: Router) {
       this.afauth.authState.subscribe((user) => {
         this.authState = user;
-      })
+      });
     }
 
     authUser(): boolean {
@@ -33,8 +33,8 @@ export class AuthService {
             photoURL: constants.PROFILE_PICTURE
           }).then(() => {
             this.setUserData(creds.username, creds.email, user.user.photoURL);
-          })
-        })
+          });
+        });
     }
 
     setUserData(username: string, email: string, photoURL: string) {
@@ -61,17 +61,17 @@ export class AuthService {
           const status = 'online';
           this.setUserStatus(status);
           this.router.navigate(['dashboard']);
-        })
+        });
     }
 
     setUserStatus(status) {
       const statuscollection = this.afs.doc(`status/${this.currentUserId}`);
       const data = {
         status: status
-      }
+      };
       statuscollection.update(data).catch((error) => {
         console.log(error);
-      })
+      });
     }
 
     logout() {
@@ -79,6 +79,6 @@ export class AuthService {
         this.router.navigate(['login']);
       }).catch((err) => {
         console.log(err);
-      })
+      });
     }
 }
