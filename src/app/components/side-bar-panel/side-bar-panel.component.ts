@@ -1,5 +1,5 @@
 import { element } from 'protractor';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-side-bar-panel',
@@ -14,22 +14,20 @@ export class SideBarPanelComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.element = document.getElementById('profile');
-    this.element.classList.add('show');
+    this.element = document.getElementById("profile");
+    this.element.classList.add("show");
   }
 
   toggle(panel: string) {
 
     this.element = document.getElementById(panel);
-    const els = document.getElementsByClassName('hidden');
+    const els = document.getElementsByClassName("hidden");
 
-    if (!this.element.classList.contains('show')) {
-      for (let i = 0; i < els.length; i++) {
-        els[i].classList.remove('show');
+    if (!this.element.classList.contains("show")) {
+      for (var i = 0; i < els.length; i++) {
+        els[i].classList.remove("show");
       }
-      this.element.classList.add('show');
-
-      return true;
+      this.element.classList.add("show");
     }
   }
 }
