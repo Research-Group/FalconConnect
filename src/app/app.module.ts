@@ -14,6 +14,7 @@ import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.c
 import { ProfileComponent } from './components/profile/profile.component';
 import { ClassesComponent } from "./components/classes/classes.component";
 import { SideBarPanelComponent } from './components/side-bar-panel/side-bar-panel.component';
+import { ClassmatesComponent } from "./components/classmates/classmates.component";
 
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
@@ -34,6 +35,9 @@ import { MaterialModule } from './material';
 import { AuthService } from './services/auth.service';
 import { AuthguardService } from './services/authguard.service';
 import { UserService } from './services/user.service';
+import { RequestsService } from './services/requests.service';
+import { RequestsComponent } from './components/requests/requests.component';
+import { AddedClassmatesComponent } from './components/added-classmates/added-classmates.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,10 @@ import { UserService } from './services/user.service';
     ProfileComponent,
     NavComponent,
     ClassesComponent,
-    SideBarPanelComponent
+    SideBarPanelComponent,
+    ClassmatesComponent,
+    RequestsComponent,
+    AddedClassmatesComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +70,7 @@ import { UserService } from './services/user.service';
     AuthService,
     AuthguardService,
     UserService,
+    RequestsService,
     SideBarPanelComponent
   ],
   bootstrap: [AppComponent]

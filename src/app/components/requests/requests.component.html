@@ -1,0 +1,12 @@
+<mat-list>
+    <mat-list-item *ngFor="let request of requests; let i = index">
+      <img matListAvatar src="{{request.photoURL}}">
+      <h3 matLine>{{request.displayName}}</h3>
+      <button (click)="acceptRequest(request)">
+        <fa-icon class="icons" [icon]="faCheck"></fa-icon>
+      </button>
+      <button (click)="deleteRequest(request)">
+        <fa-icon class="icons" [icon]="faBan"></fa-icon>
+      </button>
+    </mat-list-item>
+</mat-list>
