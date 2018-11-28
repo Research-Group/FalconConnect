@@ -76,6 +76,7 @@ export class AuthService {
 
     logout() {
       this.afauth.auth.signOut().then(() => {
+        this.setUserStatus('offline');
         this.router.navigate(['login']);
       }).catch((err) => {
         console.log(err);

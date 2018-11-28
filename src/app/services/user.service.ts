@@ -12,6 +12,7 @@ export class UserService {
   currentUser = new BehaviorSubject<firebase.User>(
     this.afauth.auth.currentUser
   );
+  statusUpdate = new BehaviorSubject<string>("No");
 
   constructor(private afauth: AngularFireAuth, private afs: AngularFirestore) {
     this.afauth.authState.subscribe((user: firebase.User) => {
@@ -48,6 +49,22 @@ export class UserService {
     return userProfiles;
   }
 
+  getUserDetails(users) {
+    return new Promise(resolve => {
+      var userProfiles = [];
+      let collRef = this.afs.collection("users").ref;
+      users.forEach((element, i) => {
+        const query = collRef.where("email", "==", element.email);
+        query.get().then(snapShot => {
+          if (!snapShot.empty) {
+            userProfiles.push(snapShot.docs[0].data());
+          }
+        });
+      });
+      resolve(userProfiles);
+    });
+  }
+
   instantSearch(startValue, endValue) {
     return this.afs
       .collection("users", ref =>
@@ -64,5 +81,30 @@ export class UserService {
         });
         return users;
       });
+  }
+
+  getUserStatus(users) {
+    return new Promise(resolve => {
+      let friendStatus = [];
+      let statusColl = this.afs.collection("status").ref;
+
+      users.map((element: any, i) => {
+          let queryRef = statusColl.where("email", "==", element.email);
+          queryRef.get().then(snapShot => {
+            friendStatus.push(snapShot.docs[0].data());
+            if (i == users.length - 1) {
+              resolve(friendStatus);
+            }
+          });
+        })
+      });
+  }
+
+  updateStatuses() {
+    this.afs.collection('status').snapshotChanges(['modified']).subscribe((data) => {
+      if (data.length != 0) {
+        this.statusUpdate.next('StatusUpdated');
+      }
+    })
   }
 }

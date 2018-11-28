@@ -1,12 +1,16 @@
-<mat-form-field class="input-width">
-  <input matInput type="text" placeholder="Search for classmate" formControlName="searchClassmate" (keyup)="instantSearch($event)" />
-</mat-form-field>
-<mat-list>
-  <mat-list-item *ngFor="let user of users; let i = index">
-    <img matListAvatar src="{{user.photoURL}}">
-    <h3 matLine>{{user.displayName}}</h3>
-    <button (click)="addClassmate(user)" *ngIf="canShow(i)">
-      <fa-icon class="icons" [icon]="faPlus"></fa-icon>
-    </button>
-  </mat-list-item>
-</mat-list>
+<div class="contain">
+  <div>
+    <mat-form-field class="input-width">
+      <input matInput type="text" placeholder="Search for classmate" (keyup)="instantSearch($event)" />
+    </mat-form-field>
+    <mat-list>
+      <mat-list-item *ngFor="let user of users; let i = index">
+        <img matListAvatar src="{{user.photoURL}}">
+        <h3 matLine>{{user.displayName}}</h3>
+        <button (click)="addClassmate(user)" *ngIf="canShow(i)">
+          <fa-icon class="icons" [icon]="faPlus"></fa-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

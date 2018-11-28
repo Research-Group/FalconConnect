@@ -4,8 +4,18 @@
       <app-classes></app-classes>
     </div>
     <div class="hidden" id="classmates">
-      <app-classmates></app-classmates>
-      <app-requests></app-requests>
+      <div class="contain">
+        <div class="component-nav">
+          <button class="button friends" (click)="onClick">Action</button>
+          <button class="button classmates" (click)="onClick">Action</button>
+          <button class="button requests" (click)="onClick">Action</button>
+        </div>
+        <div class="components">
+          <app-classmates class=""></app-classmates>
+          <app-myfriends></app-myfriends>
+          <app-requests></app-requests>
+        </div>
+      </div>
     </div>
     <div class="hidden" id="profile">
       <app-profile></app-profile>

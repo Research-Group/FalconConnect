@@ -2,6 +2,7 @@
   width: 100%;
   height: calc(100vh - 50px);
   align-content: center;
+  position: absolute;
 }
 
 .profile {

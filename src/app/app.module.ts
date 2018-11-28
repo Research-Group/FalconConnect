@@ -38,6 +38,7 @@ import { UserService } from './services/user.service';
 import { RequestsService } from './services/requests.service';
 import { RequestsComponent } from './components/requests/requests.component';
 import { AddedClassmatesComponent } from './components/added-classmates/added-classmates.component';
+import { MyfriendsComponent } from './components/myfriends/myfriends.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { AddedClassmatesComponent } from './components/added-classmates/added-cl
     SideBarPanelComponent,
     ClassmatesComponent,
     RequestsComponent,
-    AddedClassmatesComponent
+    AddedClassmatesComponent,
+    MyfriendsComponent
   ],
   imports: [
     BrowserModule,
