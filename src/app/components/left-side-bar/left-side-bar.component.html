@@ -4,15 +4,21 @@
       <div class="profile"><img class="centered-and-cropped" src="{{user.photoURL}}"></div>
     </div>
     <div>
-      <button class="right" mat-button (click)="toggle('classes')">
+      <button class="right" mat-button (click)="toggle('myfriends')">
         <fa-icon class="icons" [icon]="faUsers"></fa-icon> <br>
-        <span class="label">Classes</span>
+        <span class="label">Friends</span>
       </button>
     </div>
     <div>
       <button class="right" mat-button (click)="toggle('classmates')">
         <fa-icon class="icons" [icon]="faUser"></fa-icon> <br>
         <span class="label">Classmates</span>
+      </button>
+    </div>
+    <div>
+      <button class="right" mat-button (click)="toggle('requests')">
+        <fa-icon class="icons" [icon]="faUser"></fa-icon> <br>
+        <span class="label">Requests</span>
       </button>
     </div>
     <div></div>

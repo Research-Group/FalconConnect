@@ -22,11 +22,11 @@ export class LeftSideBarComponent implements OnInit {
   faUsers = faUsers;
   faUser = faUser;
   faCog = faCog;
- 
-  constructor(private sideBarPanel: SideBarPanelComponent, private userService: UserService) { 
+
+  constructor(private sideBarPanel: SideBarPanelComponent, private userService: UserService) {
     this.userService.currentUser.subscribe((user) => {
       this.user = user;
-    })
+    });
   }
 
   ngOnInit() {

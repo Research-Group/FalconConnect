@@ -1,18 +1,18 @@
-import { Injectable } from "@angular/core";
-import { AngularFireAuth } from "angularfire2/auth";
-import { BehaviorSubject } from "rxjs";
-import * as firebase from "firebase";
-import { AngularFirestore } from "angularfire2/firestore";
-import { map } from "rxjs/operators";
+import { Injectable } from '@angular/core';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { BehaviorSubject } from 'rxjs';
+import * as firebase from 'firebase';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class UserService {
   currentUser = new BehaviorSubject<firebase.User>(
     this.afauth.auth.currentUser
   );
-  statusUpdate = new BehaviorSubject<string>("No");
+  statusUpdate = new BehaviorSubject<string>('No');
 
   constructor(private afauth: AngularFireAuth, private afs: AngularFirestore) {
     this.afauth.authState.subscribe((user: firebase.User) => {
@@ -22,7 +22,7 @@ export class UserService {
 
   getAllUsers() {
     return this.afs
-      .collection("users")
+      .collection('users')
       .valueChanges()
       .pipe(
         map(users => {
@@ -36,10 +36,10 @@ export class UserService {
   }
 
   getUsers(emails) {
-    var userProfiles = [];
-    let collRef = this.afs.collection("users").ref;
+    const userProfiles = [];
+    const collRef = this.afs.collection('users').ref;
     emails.forEach(element => {
-      const query = collRef.where("email", "==", element.sender);
+      const query = collRef.where('email', '==', element.sender);
       query.get().then(snapShot => {
         if (!snapShot.empty) {
           userProfiles.push(snapShot.docs[0].data());
@@ -51,10 +51,10 @@ export class UserService {
 
   getUserDetails(users) {
     return new Promise(resolve => {
-      var userProfiles = [];
-      let collRef = this.afs.collection("users").ref;
+      const userProfiles = [];
+      const collRef = this.afs.collection('users').ref;
       users.forEach((element, i) => {
-        const query = collRef.where("email", "==", element.email);
+        const query = collRef.where('email', '==', element.email);
         query.get().then(snapShot => {
           if (!snapShot.empty) {
             userProfiles.push(snapShot.docs[0].data());
@@ -67,9 +67,9 @@ export class UserService {
 
   instantSearch(startValue, endValue) {
     return this.afs
-      .collection("users", ref =>
+      .collection('users', ref =>
         ref
-          .orderBy("displayName")
+          .orderBy('displayName')
           .startAt(startValue)
           .endAt(endValue)
       )
@@ -85,26 +85,26 @@ export class UserService {
 
   getUserStatus(users) {
     return new Promise(resolve => {
-      let friendStatus = [];
-      let statusColl = this.afs.collection("status").ref;
+      const friendStatus = [];
+      const statusColl = this.afs.collection('status').ref;
 
       users.map((element: any, i) => {
-          let queryRef = statusColl.where("email", "==", element.email);
+          const queryRef = statusColl.where('email', '==', element.email);
           queryRef.get().then(snapShot => {
             friendStatus.push(snapShot.docs[0].data());
-            if (i == users.length - 1) {
+            if (i === users.length - 1) {
               resolve(friendStatus);
             }
           });
-        })
+        });
       });
   }
 
   updateStatuses() {
     this.afs.collection('status').snapshotChanges(['modified']).subscribe((data) => {
-      if (data.length != 0) {
+      if (data.length !== 0) {
         this.statusUpdate.next('StatusUpdated');
       }
-    })
+    });
   }
 }

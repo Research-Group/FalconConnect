@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -9,18 +10,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { NavComponent } from "./components/nav/nav.component";
+import { NavComponent } from './components/nav/nav.component';
 import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { ClassesComponent } from "./components/classes/classes.component";
+import { ClassesComponent } from './components/classes/classes.component';
 import { SideBarPanelComponent } from './components/side-bar-panel/side-bar-panel.component';
-import { ClassmatesComponent } from "./components/classmates/classmates.component";
-
+import { ClassmatesComponent } from './components/classmates/classmates.component';
+import { FooterComponent } from './components/footer/footer.component';
 // Firebase/AngularFire2
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Firebase Config
 import { environment } from '../environments/environment';
@@ -39,6 +40,11 @@ import { RequestsService } from './services/requests.service';
 import { RequestsComponent } from './components/requests/requests.component';
 import { AddedClassmatesComponent } from './components/added-classmates/added-classmates.component';
 import { MyfriendsComponent } from './components/myfriends/myfriends.component';
+import { ChatFeedComponent } from './components/chat-feed/chat-feed.component';
+import { MessagesService } from './services/messages.service';
+
+import { SmartDatePipe } from './pipes/smart-date.pipe';
+import { RelativeDatePipe } from './pipes/relative-date.pipe';
 
 @NgModule({
   declarations: [
@@ -54,7 +60,11 @@ import { MyfriendsComponent } from './components/myfriends/myfriends.component';
     ClassmatesComponent,
     RequestsComponent,
     AddedClassmatesComponent,
-    MyfriendsComponent
+    MyfriendsComponent,
+    ChatFeedComponent,
+    FooterComponent,
+    SmartDatePipe,
+    RelativeDatePipe
   ],
   imports: [
     BrowserModule,
@@ -73,7 +83,9 @@ import { MyfriendsComponent } from './components/myfriends/myfriends.component';
     AuthguardService,
     UserService,
     RequestsService,
-    SideBarPanelComponent
+    SideBarPanelComponent,
+    MessagesService,
+    AngularFirestoreModule
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,251 @@
+.footer {
+  height: 50px;
+}
+.color{
+  color:#f68f44;
+}
+
+.content {
+  max-height: calc(100vh - 145px);
+  overflow-y: scroll;
+
+  /* 80px header + 40px footer = 120px  */
+}
+
+.content::-webkit-scrollbar {
+display: none;
+}
+
+#chat {
+width: 100%;
+max-width: 1440px;
+height: 100%;
+margin: 0 auto;
+background: #f7f8fb;
+font-family: Avenir-Book;
+font-size: 15px;
+line-height: 22px;
+/*padding: 0 150px 150px 500px;*/
+overflow: scroll;
+}
+#chat::-webkit-scrollbar {
+  display: none; }
+#chat .bubble {
+  margin-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+   }
+  #chat .bubble::before, #chat .bubble::after {
+    content: "";
+    /*height: auto;*/
+    display: inline-block;
+    /*display: table; */
+    }
+  #chat .bubble::after {
+    clear: both; }
+  #chat .bubble .content {
+    background: #FFFFFF;
+    box-shadow: 0px 9px 30px 0px rgba(44, 46, 73, 0.08);
+    border-radius: 26px 26px 26px 2px;
+    max-width: 80%;
+}
+    #chat .bubble .content::before, #chat .bubble .content::after {
+      content: "";
+      /*display: table;*/
+       }
+    #chat .bubble .content::after {
+      clear: both; }
+    #chat .bubble .content .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      overflow: hidden;
+      float: left;
+      margin: 2em; }
+      #chat .bubble .content .avatar img {
+        height: 100%; }
+    #chat .bubble .content .copy {
+      font-size: 1.1em;
+      line-height: 1.75;
+      color: #727678;
+      padding: 1.5em;
+      margin: 0; }
+  #chat .bubble .time {
+    font-weight: 200;
+    font-size: 0.8em;
+    clear: both; }
+
+
+#chat .bubble.client {
+  direction: rtl;
+   }
+  #chat .bubble.client .content {
+    background: #D6F3FF;
+    border-radius: 26px 26px 2px 26px;
+    text-align: right;
+    direction: ltr;
+    /*float: right;*/
+     }
+    #chat .bubble.client .content .avatar {
+      float: right; }
+  #chat .bubble.client .time {
+    text-align: right;
+    direction: ltr;
+     }
+
+
+#chat .bubble.attachment {
+  width: 100%;
+  position: relative;
+  margin: 5em 0;
+  clear: both; }
+  #chat .bubble.attachment .preview {
+    width: 15em;
+    border-radius: 0.5em;
+    overflow: hidden;
+    float: right;
+    box-shadow: 0px 9px 30px 0px rgba(50, 56, 107, 0.25);
+    position: absolute;
+    left: 2em;
+    bottom: 2em; }
+    #chat .bubble.attachment .preview img {
+      width: 100%; }
+  #chat .bubble.client.attachment .content {
+    max-width: 80%;
+    /*width: 100%;*/
+    min-height: 22em;
+    border-radius: 26px 26px 2px 26px;
+    padding: 2em 5em 2em 20em; }
+    #chat .bubble.client.attachment .content .title {
+      font-size: 21px;
+      color: #393F42;
+      letter-spacing: 0px;
+      font-weight: 400; }
+    #chat .bubble.attachment .content .description {
+      font-size: 1.1em;
+      color: #727678;
+      line-height: 1.75; }
+    #chat .bubble.attachment .content .buttons_wrapper {
+      margin-top: 3em; }
+      #chat .bubble.attachment .content .buttons_wrapper .button {
+        margin-right: 1em; }
+  #chat .bubble.attachment .icon {
+    position: absolute;
+    right: 2em;
+    top: 2em; }
+  #chat .bubble.client.attachment .time {
+    text-align: right;
+    direction: ltr;
+     }
+#chat #input {
+  width: 100%;
+  position: relative; }
+  #chat #input .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    float: left;
+    position: absolute;
+    left: 2em;
+    top: 2em; }
+    #chat #input .avatar img {
+      height: 100%; }
+  #chat #input textarea {
+    background: #FFFFFF;
+    box-shadow: 0px 9px 30px 0px rgba(44, 46, 73, 0.08);
+    border-radius: 26px 26px 26px 2px;
+    border: none;
+    width: 100%;
+    height: 9em;
+    padding: 2.5em 2em 2em 6em;
+    font-size: 1.1em; }
+
+    .sk-folding-cube {
+margin: 20px auto;
+width: 30px;
+height: 30px;
+position: relative;
+-webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+float: left;
+width: 50%;
+height: 50%;
+position: relative;
+-webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+.sk-folding-cube .sk-cube:before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #333;
+-webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+        animation: sk-foldCubeAngle 2.4s infinite linear both;
+-webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+-webkit-transform: scale(1.1) rotateZ(90deg);
+        transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+-webkit-transform: scale(1.1) rotateZ(180deg);
+        transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+-webkit-transform: scale(1.1) rotateZ(270deg);
+        transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+-webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+-webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+}
+.sk-folding-cube .sk-cube4:before {
+-webkit-animation-delay: 0.9s;
+        animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+0%, 10% {
+  -webkit-transform: perspective(140px) rotateX(-180deg);
+          transform: perspective(140px) rotateX(-180deg);
+  opacity: 0;
+} 25%, 75% {
+  -webkit-transform: perspective(140px) rotateX(0deg);
+          transform: perspective(140px) rotateX(0deg);
+  opacity: 1;
+} 90%, 100% {
+  -webkit-transform: perspective(140px) rotateY(180deg);
+          transform: perspective(140px) rotateY(180deg);
+  opacity: 0;
+}
+}
+
+@keyframes sk-foldCubeAngle {
+0%, 10% {
+  -webkit-transform: perspective(140px) rotateX(-180deg);
+          transform: perspective(140px) rotateX(-180deg);
+  opacity: 0;
+} 25%, 75% {
+  -webkit-transform: perspective(140px) rotateX(0deg);
+          transform: perspective(140px) rotateX(0deg);
+  opacity: 1;
+} 90%, 100% {
+  -webkit-transform: perspective(140px) rotateY(180deg);
+          transform: perspective(140px) rotateY(180deg);
+  opacity: 0;
+}
+}
+

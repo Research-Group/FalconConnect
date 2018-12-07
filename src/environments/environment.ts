@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   config: {
-    apiKey: "AIzaSyC7nOmXksZnI3D-vVc4tsW8cx03gTyNAVE",
-    authDomain: "fal-con.firebaseapp.com",
-    databaseURL: "https://fal-con.firebaseio.com",
-    projectId: "fal-con",
-    storageBucket: "fal-con.appspot.com",
-    messagingSenderId: "837881832195"
+    apiKey: 'AIzaSyC7nOmXksZnI3D-vVc4tsW8cx03gTyNAVE',
+    authDomain: 'fal-con.firebaseapp.com',
+    databaseURL: 'https://fal-con.firebaseio.com',
+    projectId: 'fal-con',
+    storageBucket: 'fal-con.appspot.com',
+    messagingSenderId: '837881832195'
   }
 };
 

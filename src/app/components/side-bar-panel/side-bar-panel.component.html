@@ -1,24 +1,22 @@
 <div class="container">
   <div class="side-bar-panel">
-    <div class="hidden" id="classes">
-      <app-classes></app-classes>
+    <div class="hidden" id="myfriends">
+      <app-myfriends></app-myfriends>
+    </div>
+    <div class="hidden" id="requests">
+      <app-requests></app-requests>
     </div>
     <div class="hidden" id="classmates">
       <div class="contain">
-        <div class="component-nav">
-          <button class="button friends" (click)="onClick">Action</button>
-          <button class="button classmates" (click)="onClick">Action</button>
-          <button class="button requests" (click)="onClick">Action</button>
-        </div>
+
         <div class="components">
           <app-classmates class=""></app-classmates>
-          <app-myfriends></app-myfriends>
-          <app-requests></app-requests>
         </div>
       </div>
     </div>
     <div class="hidden" id="profile">
       <app-profile></app-profile>
     </div>
+
+    </div>
   </div>
-</div>

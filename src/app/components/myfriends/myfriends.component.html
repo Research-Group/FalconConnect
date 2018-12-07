@@ -1,9 +1,11 @@
 <mat-list>
-  <mat-list-item *ngFor="let user of users; let i = index">
+  <mat-list-item *ngFor="let user of users; let i = index" (click) ="enterChat(user)">
     <img matListAvatar src="{{user.photoURL}}">
     <h3 matLine>{{user.displayName}}</h3>
     <p matLine>
-      {{statuses[i].status}}
+      <span class = "presence" [ngClass] =" {
+        'online' : statuses[i].status == 'online',
+        'offline': statuses[i].status == 'offline'}"></span>
     </p>
   </mat-list-item>
 </mat-list>
