@@ -1,0 +1,22 @@
+.username {
+    color: #efefef;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.icons {
+  background-color: transparent;
+  color: #efefef;
+  font-size: 15px;
+}
+
+.delete {
+    color: rgb(221, 0, 0);
+}

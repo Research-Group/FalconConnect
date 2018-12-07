@@ -1,18 +1,28 @@
 .presence {
-  border: radius 100%;
+  border-radius: 50%;
   display: inline-block;
-  height: 10px;
-  width: 10px;
+  height: 14px;
+  width: 14px;
+  left: 43px;
+  bottom: 16px;
+  border: 2px solid #323232;
+  box-sizing: border-box;
+  position: absolute;
 }
 
-.presense.online{
+.presense.online {
   background-color: greenyellow;
-
 }
 
 .presence.offline {
   background-color: red;
 }
-.a{
+
+.list-item {
   cursor: pointer;
+}
+
+.username {
+  color: #efefef;
+  font-size: 10px;
 }

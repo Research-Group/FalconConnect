@@ -1,26 +1,30 @@
-<div class = "content" #scrollMe *ngIf ="showChat">
-    <div class="sk-folding-cube" *ngIf="loadingSpinner">
+<div class="chat-feed">
+  <div class="feed">
+    <div class="content" #scrollMe *ngIf="showChat">
+      <div class="sk-folding-cube" *ngIf="loadingSpinner">
         <div class="sk-cube1 sk-cube"></div>
         <div class="sk-cube2 sk-cube"></div>
         <div class="sk-cube4 sk-cube"></div>
         <div class="sk-cube3 sk-cube"></div>
-</div>
-<div id = "chat">
-  <div *ngFor = "let msg of messages" [ngClass] = "chooseClass(msg)">
-    <div class = "content">
-      <div class = "avatar" *ngIf="msg.sentby == MyId">
-        <img src = "{{currentChatUser.photoURL}}">
       </div>
-      <div class = "avatar" *ngIf="msg.sentby != MyId">
-          <img src = "{{MyAvatar}}">
-      </div>
-      <p class ="copy">{{msg.message}}</p>
+      <div id="chat">
+        <div *ngFor="let msg of messages" [ngClass]="chooseClass(msg)">
+          <div class="content">
+            <div class="avatar" *ngIf="msg.sentby == MyId">
+              <img src="{{currentChatUser.photoURL}}">
+            </div>
+            <div class="avatar" *ngIf="msg.sentby != MyId">
+              <img src="{{MyAvatar}}">
+            </div>
+            <p class="copy">{{msg.message}}</p>
 
+          </div>
+          <p class="sent-by">{{msg.sentby}}</p>
+        </div>
+      </div>
     </div>
-    <p>{{msg.sentby}}</p>
   </div>
+  <footer class="footer" *ngIf="showChat">
+    <app-footer></app-footer>
+  </footer>
 </div>
-</div>
-<footer class="footer" *ngIf="showChat">
-  <app-footer></app-footer>
-</footer>

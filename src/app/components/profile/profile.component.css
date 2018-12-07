@@ -3,6 +3,7 @@
   height: calc(100vh - 50px);
   align-content: center;
   position: absolute;
+  text-align: center;
 }
 
 .profile {
@@ -53,4 +54,13 @@
 
 .wrap:hover .text {
   opacity: 1;
+}
+
+.username {
+  font-family: "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  color: #efefef;
 }

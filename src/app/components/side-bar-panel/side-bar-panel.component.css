@@ -20,39 +20,13 @@
   z-index: 1000;
 }
 
-.contain {
-  display: grid;
-  grid-template-columns: repeat(3, [col] 100px);
-  grid-template-rows: 45px auto;
-}
-
-.component-nav {
-  grid-template-columns: 1fr 1fr 1fr;
-  display: grid;
-  grid-row: 1;
-}
-
-.components {
-  grid-column: col / span 3;
-  grid-row: row 2;
-}
-
 .button {
   width: 100px;
   height: 100%;
 }
 
-.friends {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.classmates {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.requests {
-  grid-column: 3;
-  grid-row: 1;
+.component {
+  position: absolute;
+  height: calc(100vh - 50px);
+  width: 300px;
 }

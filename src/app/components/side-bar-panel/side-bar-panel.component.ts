@@ -14,7 +14,7 @@ export class SideBarPanelComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.element = document.getElementById("profile");
+    this.element = document.getElementById("myfriends");
     this.element.classList.add("show");
   }
 

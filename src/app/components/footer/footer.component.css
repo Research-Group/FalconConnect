@@ -1,6 +1,35 @@
-.search-width {
-  width: 80%;
+.footer {
+  background-color: #222222;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  text-align: right;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
-.color{
-  color:#f68f44;
+
+.search-width {
+  width: 100%;
+}
+
+.send-msg {
+  width: 100%;
+  color: #616161;
+  background-color: #2b2b2b;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 50px;
+  padding-left: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.icons {
+  color: #efefef;
+  font-size: 12px;
 }

@@ -1,10 +1,10 @@
 <mat-list>
-  <mat-list-item *ngFor="let user of users; let i = index" (click) ="enterChat(user)">
+  <mat-list-item class="list-item" *ngFor="let user of users; let i = index" (click)="enterChat(user)">
     <img matListAvatar src="{{user.photoURL}}">
-    <h3 matLine>{{user.displayName}}</h3>
+    <h3 matLine class="username">{{user.displayName}}</h3>
     <p matLine>
-      <span class = "presence" [ngClass] =" {
-        'online' : statuses[i].status == 'online',
+      <span class="presence" [ngClass]="{
+        'online': statuses[i].status == 'online',
         'offline': statuses[i].status == 'offline'}"></span>
     </p>
   </mat-list-item>

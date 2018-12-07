@@ -1,22 +1,15 @@
 .fill {
   flex: 1 1 auto;
 }
-.right {
-  left: 45%;
-  position: absolute;
-  top: 5px;
-  height: 40px;
-  width: 40px;
-}
+
 mat-toolbar {
   background-color: #f68f44;
   height: 50px;
+  text-align: right;
+  justify-items: right;
 }
-.contain {
-  height: 50px;
-  width: 50px;
-}
-img {
-  height: 100%;
-  max-width: auto;
+
+button {
+  color: white;
+  justify-self: right;
 }

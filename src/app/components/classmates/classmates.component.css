@@ -7,4 +7,45 @@ p {
     position: absolute;
     width: 100%;
     height: calc(100vh - 50px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.username {
+    color: #efefef;
+}
+
+.list-item {
+    text-align: left;
+}
+
+.search {
+    margin-top: 20px;
+    width: 75%;
+    color: #616161;
+    background-color: #2b2b2b;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.icons {
+    background-color: transparent;
+    color: #efefef;
+    font-size: 15px;
 }

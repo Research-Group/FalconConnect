@@ -1,6 +1,8 @@
-
-<mat-form-field class = "search-width">
-<input matInput placeholder="Enter Message" [(ngModel)]="newMessage" class = "color">
-</mat-form-field>
-<button mat-icon-button (click)="addMessage()"><mat-icon color="primary">send</mat-icon></button>
-
+<div class="footer">
+  <form class="search-width">
+    <input class="send-msg color" placeholder="Type your message here..." [(ngModel)]="newMessage" name="message">
+  </form>
+  <button mat-icon-button (click)="addMessage()">
+    <fa-icon class="icons" [icon]="faPaperPlane"></fa-icon>
+  </button>
+</div>
